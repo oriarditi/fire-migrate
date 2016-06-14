@@ -1,0 +1,28 @@
+{
+  "name": "fire-migrate",
+  "version": "0.1.4",
+  "description": "Source control your firebase migrations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "email": "ori.rdt@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oriarditi/fire-migrate.git"
+  },
+  "keywords": [
+    "firebase",
+    "migrations",
+    "scripts"
+  ],
+  "author": "Ori Arditi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oriarditi/fire-migrate/issues"
+  },
+  "homepage": "https://github.com/oriarditi/fire-migrate#readme",
+  "dependencies": {
+    "firebase": "2.4.2"
+  }
+}
