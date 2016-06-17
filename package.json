@@ -1,6 +1,6 @@
 {
   "name": "fire-migrate",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Source control your firebase migrations",
   "main": "index.js",
   "scripts": {
