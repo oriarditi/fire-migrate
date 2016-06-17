@@ -1,7 +1,10 @@
 var Firebase = require('firebase');
 
-module.exports = function(url, migrations) {
+module.exports = function(url, migrations, domain) {
   var fireMigrateRef = new Firebase(url).child('_fire-migrate').child('scripts');
+  if (domain) {
+    fireMigrateRef = fireMigrateRef.child(domain);
+  }
   fireMigrateRef.child('fireMigrateInit').update({
     status: 'DONE'
   });
