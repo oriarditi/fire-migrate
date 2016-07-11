@@ -1,4 +1,6 @@
 # fire-migrate
+[![CircleCI](https://circleci.com/gh/oriarditi/fire-migrate.svg?style=svg)](https://circleci.com/gh/oriarditi/fire-migrate)
+
 fire-migrate is a tool to source control your migrations for firebase. It's the equivalent of [liquibase](http://www.liquibase.org/) for firebase.
 
 fire-migrate verifies consecutive migrations and cross process locks.
@@ -16,7 +18,9 @@ Example:
 ```
 var fireMigrate = require('fire-migrate');
 
-fireMigrate('example.firebaseio.com', [migration1, migration2]);
+fireMigrate.migrate('example.firebaseio.com', [migration1, migration2]).then(() => {
+  // continue with the rest of the application   
+});
 
 function migration1(resolve) {
   firebaseRef.push({

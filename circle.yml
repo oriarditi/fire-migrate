@@ -1,0 +1,22 @@
+machine:
+  node:
+    version: 5.10.1
+  hosts:
+    localhost.firebaseio.test: 127.0.0.1
+
+general:
+  artifacts:
+    - "test-results.xml"
+    - $CIRCLE_TEST_REPORTS
+
+test:
+  override:
+    - npm run junit
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | npm login
+      - npm run prepublish
+      - npm publish ./
