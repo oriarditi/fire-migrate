@@ -2,8 +2,8 @@ import Promise from 'bluebird';
 import Firebase from 'firebase';
 
 class FireMigrate {
-  migrate(url, migrations, domain) {
-    let fireMigrateRef = new Firebase(url).child('_fire-migrate').child('scripts');
+  migrate(firebaseRef, migrations, domain) {
+    let fireMigrateRef = firebaseRef.child('_fire-migrate').child('scripts');
     if (domain) {
       fireMigrateRef = fireMigrateRef.child(domain);
     }

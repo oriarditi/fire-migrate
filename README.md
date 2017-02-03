@@ -11,14 +11,18 @@ fire-migrate matches the migrations by the name of the functions so if the name 
 
 Currently fire-migrate works with firebase 2.4.2 and **NOT** 3.x until [react-native integration is restored](https://groups.google.com/forum/#!topic/firebase-talk/fvpjeYEg8L8).
 
-To install
 ```npm install --save fire-migrate```
 
 Example:
 ```
 var fireMigrate = require('fire-migrate');
+var databaseRef = Firebase.initializeApp({
+  apiKey: 'apiKey',
+  authDomain: 'projectId.firebaseapp.com',
+  databaseURL: 'https://example.firebaseio.com'
+}).database().ref();
 
-fireMigrate.migrate('example.firebaseio.com', [migration1, migration2]).then(() => {
+fireMigrate.migrate(databaseRef, [migration1, migration2]).then(() => {
   // continue with the rest of the application   
 });
 
