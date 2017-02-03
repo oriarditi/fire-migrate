@@ -9,8 +9,6 @@ To use call fireMigrate with the URL of your firebase application and an array o
 
 fire-migrate matches the migrations by the name of the functions so if the name changes it will be reran.
 
-Currently fire-migrate works with firebase 2.4.2 and **NOT** 3.x until [react-native integration is restored](https://groups.google.com/forum/#!topic/firebase-talk/fvpjeYEg8L8).
-
 ```npm install --save fire-migrate```
 
 Example:
